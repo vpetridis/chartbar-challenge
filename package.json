@@ -1,0 +1,59 @@
+{
+  "name": "chartbar-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postcss:watch": "postcss src/styles.css --dir public --watch",
+    "stylelint": "stylelint src/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpetridis/chartbar-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vpetridis/chartbar-challenge/issues"
+  },
+  "homepage": "https://github.com/vpetridis/chartbar-challenge#readme",
+  "devDependencies": {
+    "postcss": "^8.4.14"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.10",
+    "postcss-import": "^14.1.0",
+    "postcss-mixins": "^9.0.2",
+    "postcss-preset-env": "^7.7.0",
+    "stylelint": "^14.8.5",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-no-browser-hacks": "^1.2.1"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "plugins": [
+      "stylelint-no-browser-hacks/lib"
+    ],
+    "rules": {
+      "indentation": 2,
+      "string-quotes": "double",
+      "no-duplicate-selectors": true,
+      "color-hex-case": "lower",
+      "color-hex-length": "long",
+      "color-named": "never",
+      "property-no-unknown": true,
+      "plugin/no-browser-hacks": [
+        true,
+        {
+          "browsers": [
+            "last 2 versions",
+            "ie >=8"
+          ]
+        }
+      ]
+    }
+  }
+}
